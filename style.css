@@ -1,0 +1,75 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 100vh;
+}
+
+.deck {
+  display: flex;
+}
+
+.deck .card {
+  cursor: pointer;
+  margin-left: -4px;
+  transform: rotate(4deg);
+}
+
+.deck .card.selected {
+  background-color: yellow;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100px;
+  width: 70px;
+
+  background-color: blue;
+  border-radius: 10px;
+  border: 1px solid #000;
+}
+
+.board {
+  display: flex;
+  margin: 10px;
+}
+
+.board.active .placeholder {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.board.active .placeholder:hover {
+  background-color: yellow;
+}
+
+.board *:not(:last-child) {
+  margin-right: 10px;
+}
+
+.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100px;
+  width: 70px;
+
+  background-color: #999999;
+  border-radius: 10px;
+  border: 1px solid #000;
+  opacity: 0.3;
+}
